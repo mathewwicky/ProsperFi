@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Application Form</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center mt-4 mb-4">Loan Application Form</h1>
+    <form action="https://formspree.io/f/mwkgpdjr" method="POST">
+        <fieldset class="border p-4">
+            <legend class="mb-4">Section A: Loan Details</legend>
+            <div class="row">
+              <div class="col-md-6">
+                <label for="desiredLoanAmount" class="form-label">Desired Loan Amount $</label>
+                <input type="number" class="form-control" id="desiredLoanAmount" name="desiredLoanAmount" required>
+              </div>
+              <div class="col-md-6">
+                <label for="annualIncome" class="form-label">Annual Income $</label>
+                <input type="number" class="form-control" id="annualIncome" name="annualIncome" required>
+              </div>
+            </div>
+            <div class="form-group mt-4">
+              <label for="loanPurpose" class="form-label">Loan will be used for:</label>
+              <select class="form-select" id="loanPurpose" name="loanPurpose" required>
+                <option value="">Select Purpose</option>
+                <option value="business">Business Launching</option>
+                <option value="homeImprovement">Home Improvement</option>
+                <option value="education">Education</option>
+                <option value="houseBuilding">House Building</option>
+                <option value="investment">Investment</option>
+                <option value="other">Other</option>
+              </select>
+              <div id="otherPurpose" class="form-group d-none">
+                <label for="otherPurposeDetails" class="form-label">Please specify:</label>
+                <input type="text" class="form-control" id="otherPurposeDetails" name="otherPurposeDetails">
+              </div>
+            </div>
+          </fieldset>
+          
+
+          <fieldset class="border p-4 mt-4">
+            <legend class="mb-4">Section B: Contact Information</legend>
+            <div class="row">
+              <div class="col-md-6">
+                <label for="title" class="form-label">Title:</label>
+                <select class="form-select" id="title" name="title" required>
+                  <option value="">Select Title</option>
+                  <option value="mr">Mr.</option>
+                  <option value="ms">Ms.</option>
+                  <option value="mrs">Mrs.</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="firstName" class="form-label">First Name:</label>
+                <input type="text" class="form-control" id="firstName" name="firstName" required>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-md-6">
+                <label for="lastName" class="form-label">Last Name:</label>
+                <input type="text" class="form-control" id="lastName" name="lastName" required>
+              </div>
+              <div class="col-md-6">
+                <label for="dateOfBirth" class="form-label">Date of Birth:</label>
+                <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" required>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-md-6">
+                <label class="form-label">Marital Status:</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="single" id="maritalStatusSingle" name="maritalStatus">
+                  <label class="form-check-label" for="maritalStatusSingle">Single</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="married" id="maritalStatusMarried" name="maritalStatus">
+                  <label class="form-check-label" for="maritalStatusMarried">Married</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="other" id="maritalStatusOther" name="maritalStatus">
+                  <label class="form-check-label" for="maritalStatusOther">Other (Please Specify)</label>
+                  <input type="text" class="form-control d-none" id="maritalStatusOtherDetails" name="maritalStatusOtherDetails">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email Address:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-md-6">
+                <label for="phoneNumber" class="form-label">Phone Number:</label>
+                <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" required>
+              </div>
+              <div class="col-md-6">
+                <label for="address" class="form-label">Address:</label>
+                <input type="text" class="form-control" id="address" name="address" required>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-md-6">
+                <label for="city" class="form-label">City:</label>
+                <input type="text" class="form-control" id="city" name="city" required>
+              </div>
+              <div class="col-md-3">
+                <label for="state" class="form-label">State/Province:</label>
+                <input type="text" class="form-control" id="state" name="state" required>
+              </div>
+              <div class="col-md-3">
+                <label for="postalCode" class="form-label">Postal/Zip Code:</label>
+                <input type="text" class="form-control" id="postalCode" name="postalCode" required>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-md-12">
+                <label for="timeLived" class="form-label">How long have you lived at this address?</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="0-1" id="yearsOfExperience0" name="yearsOfExperience">
+                  <label class="form-check-label" for="yearsOfExperience0">0-1 Year</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="1-2" id="yearsOfExperience1" name="yearsOfExperience">
+                  <label class="form-check-label" for="yearsOfExperience1">1-2 Years</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="2-3" id="yearsOfExperience2" name="yearsOfExperience">
+                  <label class="form-check-label" for="yearsOfExperience2">2-3 Years</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="3-4" id="yearsOfExperience3" name="yearsOfExperience">
+                  <label class="form-check-label" for="yearsOfExperience3">3-4 Years</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="4-5" id="yearsOfExperience4" name="yearsOfExperience">
+                  <label class="form-check-label" for="yearsOfExperience4">4-5 Years</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="5+" id="yearsOfExperience5" name="yearsOfExperience">
+                  <label class="form-check-label" for="yearsOfExperience5">5+ Years</label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          
+
+          <fieldset class="border p-4 mt-4">
+            <legend class="mb-4">Section C: Employment Information</legend>
+            <div class="row">
+              <div class="col-md-6">
+                <label for="employerFirstName" class="form-label">Present Employer - First Name:</label>
+                <input type="text" class="form-control" id="employerFirstName" name="employerFirstName" required>
+              </div>
+              <div class="col-md-6">
+                <label for="employerLastName" class="form-label">Present Employer - Last Name:</label>
+                <input type="text" class="form-control" id="employerLastName" name="employerLastName" required>
+              </div>
+            </div>
+            <div class="form-group mt-4">
+              <label for="occupation" class="form-label">Occupation:</label>
+              <input type="text" class="form-control" id="occupation" name="occupation" required>
+            </div>
+            <div class="form-group mt-4">
+              <label for="yearsOfExperience" class="form-label">Years of experience:</label>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="0-1" id="yearsOfExperience0" name="yearsOfExperience">
+                <label class="form-check-label" for="yearsOfExperience0">0-1 Year</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="1-2" id="yearsOfExperience1" name="yearsOfExperience">
+                <label class="form-check-label" for="yearsOfExperience1">1-2 Years</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="2-3" id="yearsOfExperience2" name="yearsOfExperience">
+                <label class="form-check-label" for="yearsOfExperience2">2-3 Years</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="3-4" id="yearsOfExperience3" name="yearsOfExperience">
+                <label class="form-check-label" for="yearsOfExperience3">3-4 Years</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="4-5" id="yearsOfExperience4" name="yearsOfExperience">
+                <label class="form-check-label" for="yearsOfExperience4">4-5 Years</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="5+" id="yearsOfExperience5" name="yearsOfExperience">
+                <label class="form-check-label" for="yearsOfExperience5">5+ Years</label>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-md-6">
+                <label for="grossMonthlyIncome" class="form-label">Gross monthly income $:</label>
+                <input type="number" class="form-control" id="grossMonthlyIncome" name="grossMonthlyIncome" required>
+              </div>
+              <div class="col-md-6">
+                <label for="monthlyRentMortgage" class="form-label">Monthly rent/mortgage $:</label>
+                <input type="number" class="form-control" id="monthlyRentMortgage" name="monthlyRentMortgage" required>
+              </div>
+            </div>
+            <div class="form-group mt-4">
+              <label for="employmentComments" class="form-label">Comments (optional):</label>
+              <textarea class="form-control" id="employmentComments" name="employmentComments" rows="3"></textarea>
+            </div>
+          </fieldset>
+          
+
+          <fieldset class="border p-4 mt-4">
+            <legend class="mb-4">Section D: Bank References</legend>
+            <p>Please list two bank references.</p>
+          
+            <div class="row">
+              <div class="col-md-12">
+                <h4 class="mb-3">Reference 1</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label for="bankReference1Institution" class="form-label">Institution Name:</label>
+                <input type="text" class="form-control" id="bankReference1Institution" name="bankReference1Institution" required>
+              </div>
+              <div class="col-md-6">
+                <label for="bankReference1AccountNumber" class="form-label">Saving Account #:</label>
+                <input type="text" class="form-control" id="bankReference1AccountNumber" name="bankReference1AccountNumber" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label for="bankReference1Address" class="form-label">Address:</label>
+                <input type="text" class="form-control" id="bankReference1Address" name="bankReference1Address" required>
+              </div>
+              <div class="col-md-6">
+                <label for="bankReference1PhoneNumber" class="form-label">Phone Number:</label>
+                <input type="tel" class="form-control" id="bankReference1PhoneNumber" name="bankReference1PhoneNumber" required>
+              </div>
+            </div>
+          
+            <div class="row mt-4">
+              <div class="col-md-12">
+                <h4 class="mb-3">Reference 2</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label for="bankReference2Institution" class="form-label">Institution Name:</label>
+                <input type="text" class="form-control" id="bankReference2Institution" name="bankReference2Institution" required>
+              </div>
+              <div class="col-md-6">
+                <label for="bankReference2AccountNumber" class="form-label">Saving Account #:</label>
+                <input type="text" class="form-control" id="bankReference2AccountNumber" name="bankReference2AccountNumber" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label for="bankReference2Address" class="form-label">Address:</label>
+                <input type="text" class="form-control" id="bankReference2Address" name="bankReference2Address" required>
+              </div>
+              <div class="col-md-6">
+                <label for="bankReference2PhoneNumber" class="form-label">Phone Number:</label>
+                <input type="tel" class="form-control" id="bankReference2PhoneNumber" name="bankReference2PhoneNumber" required>
+              </div>
+            </div>
+          </fieldset>
+          
+          <fieldset class="border p-4 mt-4">
+            <legend class="mb-4">Section E: Consent</legend>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="yes" id="consent1" name="consent1" required>
+              <label class="form-check-label" for="consent1">
+                I authorize prospective Credit Grantors/Lending/Leasing Companies to obtain personal and credit information about me from my employer and credit bureau, or credit reporting agency, any person who has or may have any financial dealing with me, or from any references I have provided. This information, as well as that provided by me in the application, will be referred to in connection with this lease and any other relationships we may establish from time to time. Any personal and credit information obtained may be disclosed from time to time to other lenders, credit bureaus, or other credit reporting agencies.
+              </label>
+            </div>
+            <div class="form-check mt-4">
+              <input class="form-check-input" type="checkbox" value="yes" id="consent2" name="consent2" required>
+              <label class="form-check-label" for="consent2">
+                I hereby agree that the information given is true, accurate, and complete as of the date of this application submission.
+              </label>
+            </div>
+          </fieldset>
+           <div class="text-center mt-4">
+             <button type="submit" class="btn btn-primary">Send Application</button>
+            </div>
+            </form>
+                                                    
+                      
